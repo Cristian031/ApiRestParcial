@@ -1,0 +1,534 @@
+{
+	"info": {
+		"_postman_id": "1ec06332-122a-40bd-9132-5a360098ab93",
+		"name": "Persona Api Request",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30443952"
+	},
+	"item": [
+		{
+			"name": "Persona",
+			"item": [
+				{
+					"name": "Get All",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://parcialapi.onrender.com/api/v1/personas",
+							"protocol": "https",
+							"host": [
+								"parcialapi",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"personas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get One",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://parcialapi.onrender.com/api/v1/personas/1",
+							"protocol": "https",
+							"host": [
+								"parcialapi",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"personas",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Cristian\",\r\n    \"apellido\":\"Magallanes\",\r\n    \"dni\": 41819596,\r\n    \"domicilio\":{\r\n        \"calle\": \"El Ruiseñor\",\r\n        \"numero\": 10,\r\n        \"localidad\": {\r\n            \"id\":1,\r\n            \"denominacion\":\"Guaymallen\"\r\n        }\r\n    },\r\n    \"libros\":[\r\n        {\r\n            \"titulo\":\"Los dias del Venado\",\r\n            \"fecha\":2012,\r\n            \"genero\": \"Fantastico\",\r\n            \"paginas\": 329,\r\n            \"autores\":[\r\n                {\r\n                        \"id\": 1,\r\n                        \"nombre\": \"Liliana\",\r\n                        \"apellido\": \"Bodoc\",\r\n                        \"biografia\": \" Liliana Bodoc nació en Santa Fe, Argentina, en 1958.\"\r\n\r\n                }\r\n            ]\r\n        }\r\n    ]\r\n}\r\n    \r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://parcialapi.onrender.com/api/v1/personas",
+							"protocol": "https",
+							"host": [
+								"parcialapi",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"personas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://parcialapi.onrender.com/api/v1/personas/1",
+							"protocol": "https",
+							"host": [
+								"parcialapi",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"personas",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"nombre\": \"Daniel\",\r\n    \"apellido\": \"Magallanes\",\r\n    \"dni\": 41819596,\r\n    \"domicilio\": {\r\n          \"calle\": \"El Ruiseñor\",\r\n          \"numero\": 10,\r\n          \"localidad\": {\r\n                \"id\": 1,\r\n                \"denominacion\": \"Guaymallen\"\r\n            }\r\n        },\r\n        \"libros\": [\r\n            {\r\n            \"id\": 1,\r\n            \"titulo\": \"Los dias del Venado\",\r\n            \"fecha\": 2012,\r\n            \"genero\": \"Fantastico\",\r\n            \"paginas\": 329,\r\n            \"autores\": [\r\n                    {\r\n                    \"id\": 2,\r\n                    \"nombre\": \"Liliana\",\r\n                    \"apellido\": \"Bodoc\",\r\n                    \"biografia\": \" Liliana Bodoc nació en Santa Fe, Argentina, en 1958.\"\r\n                }\r\n            ]\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://parcialapi.onrender.com/api/v1/personas/1",
+							"protocol": "https",
+							"host": [
+								"parcialapi",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"personas",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://parcialapi.onrender.com/api/v1/personas/search?filtro=Cristian",
+							"protocol": "https",
+							"host": [
+								"parcialapi",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"personas",
+								"search"
+							],
+							"query": [
+								{
+									"key": "filtro",
+									"value": "Cristian"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET ALL PAGED",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://parcialapi.onrender.com/api/v1/personas/paged?page=0&size=5&sort=id,asc",
+							"protocol": "https",
+							"host": [
+								"parcialapi",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"personas",
+								"paged"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "size",
+									"value": "5"
+								},
+								{
+									"key": "sort",
+									"value": "id,asc"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SEARCH PAGED",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://parcialapi.onrender.com/api/v1/personas/searchPaged?filtro=Cristian&page=0&size=5&sort=id,asc",
+							"protocol": "https",
+							"host": [
+								"parcialapi",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"personas",
+								"searchPaged"
+							],
+							"query": [
+								{
+									"key": "filtro",
+									"value": "Cristian"
+								},
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "size",
+									"value": "5"
+								},
+								{
+									"key": "sort",
+									"value": "id,asc"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Autores",
+			"item": [
+				{
+					"name": "Get All",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://parcialapi.onrender.com/api/v1/autores",
+							"protocol": "https",
+							"host": [
+								"parcialapi",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"autores"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get One",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://parcialapi.onrender.com/api/v1/autores/1",
+							"protocol": "https",
+							"host": [
+								"parcialapi",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"autores",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Liliana\",\r\n    \"apellido\": \"Bodoc\",\r\n    \"biografia\": \" Liliana Bodoc nació en Santa Fe, Argentina, en 1958.\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://parcialapi.onrender.com/api/v1/autores",
+							"protocol": "https",
+							"host": [
+								"parcialapi",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"autores"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"nombre\": \"Milagros\",\r\n    \"apellido\": \"Bodoc\",\r\n    \"biografia\": \" Liliana Bodoc nació en Santa Fe, Argentina, en 1958.\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://parcialapi.onrender.com/api/v1/autores/1",
+							"protocol": "https",
+							"host": [
+								"parcialapi",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"autores",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://parcialapi.onrender.com/api/v1/autores/1",
+							"protocol": "https",
+							"host": [
+								"parcialapi",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"autores",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Localidades",
+			"item": [
+				{
+					"name": "Get All",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"denominacion\":\"Guaymallen\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://parcialapi.onrender.com/api/v1/localidades",
+							"protocol": "https",
+							"host": [
+								"parcialapi",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"localidades"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get One",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://parcialapi.onrender.com/api/v1/localidades/1",
+							"protocol": "https",
+							"host": [
+								"parcialapi",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"localidades",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"denominacion\": \"Guaymallen\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://parcialapi.onrender.com/api/v1/localidades",
+							"protocol": "https",
+							"host": [
+								"parcialapi",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"localidades"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "https://parcialapi.onrender.com/api/v1/localidades/1",
+							"protocol": "https",
+							"host": [
+								"parcialapi",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"localidades",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://parcialapi.onrender.com/api/v1/localidades",
+							"protocol": "https",
+							"host": [
+								"parcialapi",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"localidades"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
